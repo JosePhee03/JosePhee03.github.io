@@ -1,0 +1,263 @@
+/* Variables ---------------------------------------------------------------*/
+
+:root{
+    /* Colores */
+    --teclado:#7BAA97;
+    --teclado-alt:#6E9991;
+    --calculadora:#456585;
+    --calculadora-alt:#405871;
+    --blanco: #fff;
+    --pantalla:#88AE93;
+    --pantalla-fuente:#46634E;
+    --fondo-oscuro:#152B3C;
+    --fondo-oscuro-alt:#112331;
+    --morado:#8530C1;
+    --fondo-claro:#8CB6A5;
+}
+
+
+/* Fin Variables */
+
+
+/* Funtes------------------------------------------------------------------ */
+
+.pantalla-font{
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--pantalla-fuente);
+    text-decoration: none;
+}
+
+.teclado-font{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.header__text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.footer__text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: var(--calculadora);
+    text-decoration: none;
+}
+
+/* Fin Fuentes */
+
+
+/* General----------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+
+}
+/* Fin General */
+
+/* Body---------------------------------------------------------- */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.fondo-oscuro{
+    background-color: var(--fondo-oscuro);
+    transition: 0.2s;
+}
+
+.fondo-claro{
+    background-color: var(--fondo-claro);
+    transition: 0.2s;
+}
+
+/* Fin Body */
+
+/* Header ---------------------------------------------------------------*/
+header{
+
+    display: flex;
+    justify-content: center;
+
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2em 0;
+}
+
+.fondo-oscuro-alt{
+    background-color: var(--fondo-oscuro-alt);
+    transition: 0.2s;
+}
+
+.fondo-claro-alt{
+    background-color: var(--teclado);
+    transition: 0.2s;
+}
+
+.boton-tema{
+    width: 3rem;
+    height: 3rem;
+
+
+    background-size: cover;
+    position: absolute;
+    right: 1rem;
+
+}
+
+.tema-oscuro{
+    background-image: url(../img/boton-tema-oscuro.png);
+    transition: 0.2s;
+}
+
+.tema-claro{
+    background-image: url(../img/boton-tema-claro.png);
+    transition: 0.2s;
+}
+
+.boton-tema:hover{
+    cursor: pointer;
+    
+}
+
+.fuente-claro{
+    color: var(--blanco);
+    transition: 0.2s;
+}
+
+.fuente-oscuro{
+    color: var(--teclado);
+    transition: 0.2s;
+}
+/* Fin Header */
+
+
+/* Calculadora-----------------------------------*/
+.calculadora{
+    background-color: var(--calculadora);
+    border-left: solid .3rem var(--calculadora-alt);
+    border-bottom: solid .3rem var(--calculadora-alt);
+    padding: 1.5em;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+}
+
+/* fin Calculadora */
+
+/* Pantalla----------------------------- */
+.pantalla{
+    background-color: var(--pantalla);
+    width: 29.5rem;
+    height: 3.5em;
+    padding-right: 1em;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+/* Fin pantalla */
+
+/* Teclado */
+.teclado{
+
+    display: grid;
+    grid-template-columns: repeat(4, 7rem);
+    grid-template-rows: repeat(6, 5rem);
+
+    gap: .5rem;
+}
+
+
+
+
+/* Fin Teclado */
+
+/* Teclas */
+.teclas{
+    background-color: var(--teclado);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: solid .3rem var(--teclado-alt);
+    border-bottom: solid .3rem var(--teclado-alt);
+}
+
+.teclas:hover{
+    box-shadow: 0 0 5px var(--morado);
+    cursor: pointer;
+
+
+}
+
+.tecla-click{
+    border: none;
+}
+
+.tecla-del{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.tecla-igual{
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.tecla-click{
+    border: none;
+    transition: 0.2s;
+}
+/* Fin Teclas */
+
+/* Footer */
+footer{
+    position: absolute;
+    bottom: 0;
+
+    padding-bottom: 1rem;
+}
+
+
+/* Fin Footer */
+
+
+/* querys */
+@media (max-width: 600px){
+    html{
+        font-size: 8px;
+    }
+    
+}
+
+
+/* Fin querys */
